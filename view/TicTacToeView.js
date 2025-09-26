@@ -8,6 +8,8 @@ export class TicTacToeView{
     megjelen(){
         document.addEventListener("click", ()=>{
             this.controller.doKattint(13);
+            const cusotmEvent = new CustomEvent("katt", { detail: "Yeeeeeeee" });
+            window.dispatchEvent(customEvent);
         });
     }
 

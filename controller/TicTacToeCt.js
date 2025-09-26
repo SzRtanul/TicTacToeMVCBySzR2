@@ -6,6 +6,10 @@ export class TicTacToeCT{
     constructor(view = new TicTacToeView(this), model=new TicTacToe()){
         this.view = view;
         this.model = model;
+        this.#doBetolt();
+        window.addEventListener("katt", () => {
+            this.doKattint();
+        })
     }
 
     #doBetolt(){
